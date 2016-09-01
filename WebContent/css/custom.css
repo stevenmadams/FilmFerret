@@ -1,0 +1,65 @@
+header[role="banner"] {
+  #logo-main {
+    display: block;
+
+
+
+  }
+}
+
+.dip {
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+
+
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+
+
+    h1{font-family: 'Exo 2', sans-serif;}
+        h2{font-family: 'Exo 2', sans-serif;}
+            h3{font-family: 'Exo 2', sans-serif;}
+                h4{font-family: 'Exo 2', sans-serif;}
+                    h5{font-family: 'Exo 2', sans-serif;}
+
+.card {
+                        max-width: 20rem;
+
+                    }
+.card {
+    position: relative;
+    display: block;
+    margin-bottom: .75rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.card-img-top {
+    border-top-right-radius: .25rem;
+    border-top-left-radius: .25rem;
+    max-width: 19.75rem;
+    max-height: 40rem;
+}
+.card-block {
+    padding: 1.25rem;
+}
+.list-group-flush .list-group-item {
+    border-radius: 0;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.listcol
+{padding: 4rem;}
