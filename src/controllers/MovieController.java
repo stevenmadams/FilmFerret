@@ -42,11 +42,11 @@ public class MovieController {
 		return mv;
 	}
 	
-	@RequestMapping(path = "changeMovie.do", method = RequestMethod.GET)
+	@RequestMapping(path = "ChangeMovie.do", method = RequestMethod.POST)
 	public ModelAndView getMovieByIdChange(Movie movie) {
 		movieDao.equals(movie);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("newMovie.jsp");
+		mv.setViewName("changeMovie.jsp");
 		return mv;
 	}
 	

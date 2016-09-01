@@ -60,7 +60,10 @@
         <td><form action="RemoveMovie.do" method="POST">
 							<input type="hidden" name="id" value="${movie.id}" />
 							<input type="submit" value="Delete" />
-						</form> </td>
+						</form><form action="ChangeMovie.do" method="POST">
+									<input type="hidden" name="id" value="${movie.id}" />
+									<input type="submit" value="Edit" />
+								</form> </td>
     </tr>
 </c:forEach>
 </table>
