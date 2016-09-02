@@ -54,7 +54,7 @@
 			<div class="card text-center">
 	  <img class="card-img-top" src="${movie.url}" alt="Card image cap">
 	  <div class="card-block">
-	    <h4 class="card-title">${movie.title}></h4>
+	    <h4 class="card-title">${movie.title}</h4>
 	    <p class="card-text"><i>${movie.tagline}</i></p>
 	  </div>
 	  <ul class="list-group list-group-flush">

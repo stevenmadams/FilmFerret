@@ -62,4 +62,31 @@ header[role="banner"] {
     border: 1px solid #ddd;
 }
 .listcol
-{padding: 4rem;}
+{padding: 1rem;}
+
+.homebuttons{
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+
+}
+.homebuttons a {
+  color: white;
+}
+
+.list {
+  background-color: #A27035;
+  height: 15em;
+  vertical-align: middle;
+  
+}
+.edit {
+  background-color: #01110A;
+  height: 15em;
+  vertical-align: middle;
+}
+.add {
+  background-color: #650D1B;
+  height: 15em;
+  vertical-align: middle;
+}

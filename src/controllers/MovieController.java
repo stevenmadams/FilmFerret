@@ -42,10 +42,31 @@ public class MovieController {
 		return mv;
 	}
 	
-	@RequestMapping(path = "ChangeMovie.do", method = RequestMethod.POST)
-	public ModelAndView getMovieByIdChange(Movie movie) {
-		movieDao.equals(movie);
+	@RequestMapping(path = "UpdateMovie.do", method = RequestMethod.POST)
+	public ModelAndView updateMovie(@RequestParam("title") String title,
+			@RequestParam("tagline") String tagline,
+			@RequestParam("year") String year,
+			@RequestParam("rating") String rating,
+			@RequestParam("genre") String genre,
+			@RequestParam("runtime") int runtime,
+			@RequestParam("url") String url,
+			@RequestParam("id") int id
+			
+			) {
+	
 		ModelAndView mv = new ModelAndView();
+		mv.setViewName("viewMovie.jsp");
+		Movie m = movieDao.getMovieById(id);
+		movieDao.updateMovie(m, title , tagline, year, rating, genre, runtime, url);
+		mv.addObject(m);
+		return mv;
+	}
+	
+	@RequestMapping(path = "ChangeMovie.do", method = RequestMethod.GET)
+	public ModelAndView getMovieByIdChange(@RequestParam("id") int id) {
+		ModelAndView mv = new ModelAndView();
+		Movie movie = movieDao.getMovieById(id);
+		mv.addObject("movie", movie);
 		mv.setViewName("changeMovie.jsp");
 		return mv;
 	}

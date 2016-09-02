@@ -95,6 +95,7 @@ public class Movie {
 				+ ", genre=" + genre + ", runtime=" + runtime + ", url=" + url + "]";
 	}
 
+
 	
 	
 	

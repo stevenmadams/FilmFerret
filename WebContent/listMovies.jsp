@@ -64,14 +64,14 @@
 <%-- CARD --%>
 
 <%-- </c:forEach> --%>
-<div class="row">
+<div class="container">
 <c:forEach items="${movies}" var="movie">
 
-	<div class="col-md-3 listcol">
+	<div class="col-md-3">
 				<div class="card">
 		  <img class="card-img-top" src="<c:out value="${movie.url}"/>" alt="Card image cap">
 		  <div class="card-block text-center">
-		    <h4 class="card-title"><a href="viewMovie/newMovie.do?${movie.id}">><c:out value="${movie.title}"/></a></h4>
+		    <h4 class="card-title"><a href="viewMovie/?${movie.id}"><c:out value="${movie.title}"/></a></h4>
 		    <p class="card-text"><i><c:out value="${movie.tagline}"/></i></p>
 		  </div>
 		  <ul class="list-group list-group-flush text-center">

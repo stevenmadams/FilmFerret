@@ -14,6 +14,15 @@ import org.springframework.web.context.WebApplicationContext;
 public class MovieFileDAO implements MovieDAO {
 	private static final String FILE_NAME="/WEB-INF/movielib.csv";
 	private List<Movie> movies = new ArrayList<>();
+//	private String title;
+//	private String tagline;
+//	private String genre;
+//	private String year;
+//	private String rating;
+//	private int runtime;
+//	private String url;
+//	int id;
+//	
 	
 	@Autowired 
 	private WebApplicationContext wac;
@@ -32,13 +41,13 @@ public class MovieFileDAO implements MovieDAO {
 				if (tokens[0] == null ) 
 					id = movies.lastIndexOf(getAllMovies())+1;
 				String title = tokens[1];
-				String tag = tokens[2];
+				String tagline = tokens[2];
 				String year = tokens[3];
 				String rating = tokens[4];
 				String genre = tokens[5];
 				int runtime = Integer.parseInt(tokens[6]);
 				String url = tokens[7];
-				movies.add(new Movie(id, title, tag, year, rating, genre, runtime, url));
+				movies.add(new Movie(id, title, tagline, year, rating, genre, runtime, url));
 			}
 		} catch (Exception e) {
 			System.err.println(e);
@@ -61,7 +70,7 @@ public class MovieFileDAO implements MovieDAO {
 	public Movie getMovieByTitle(String title) {
 		Movie s = null;
 		for (Movie movie : movies) {
-			if (movie.getGenre().equals(title)) {
+			if (movie.getTitle().equals(title)) {
 				s = movie;
 				break;
 			}
@@ -72,7 +81,7 @@ public class MovieFileDAO implements MovieDAO {
 	public Movie getMovieById(int id) {
 		Movie s = null;
 		for (Movie movie : movies) {
-			if (movie.getTitle().equals(id)) {
+			if (movie.getId() == id) {
 				s = movie;
 				break;
 			}
@@ -126,6 +135,17 @@ public class MovieFileDAO implements MovieDAO {
 		}
 		
 		
+	}
+
+	@Override
+	public void updateMovie(Movie movie, String title, String tagline, String year, String rating, String genre, int runtime, String url) {
+		movie.setTitle(title);
+		movie.setGenre(genre);
+		movie.setTagline(tagline);
+		movie.setUrl(url);
+		movie.setRating(rating);
+		movie.setYear(year);
+		movie.setRuntime(runtime);
 	}
 	
 }

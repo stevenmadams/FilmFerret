@@ -48,24 +48,40 @@
 </header>
 <body>
 	  <!-- END OD NAV -->
-<a href="newMovie.html">Add Movie</a><br/>
-<a href="ListMovies.do">List Movies</a><br/>
+<div class="container">
 
-
-	<table action = "EditMovies.do" method="GET" >
+<div class="table-responsive">
+	<table action = "EditMovies.do" method="GET" class="table">
+		<tr>
+			<th>Title</th>
+			<th>Year</th>
+			<th>Genre</th>
+			<th>Rating</th>
+			<th>Runtime</th>
+			<th>Delete</th>
+			<th>Edit</th>
+		</tr>
 <c:forEach items="${movies}" var="movie">
     <tr>
         <td><c:out value="${movie.title}"/></td>
+				  <td><c:out value="${movie.year}"/></td>
         <td><c:out value="${movie.genre}"/></td>
-        <td><form action="RemoveMovie.do" method="POST">
+				  <td><c:out value="${movie.rating}"/></td>
+					  <td><c:out value="${movie.runtime}"/></td>
+
+        <td>
+					<form action="RemoveMovie.do" method="POST">
 							<input type="hidden" name="id" value="${movie.id}" />
-							<input type="submit" value="Delete" />
-						</form><form action="ChangeMovie.do" method="POST">
+							<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+						</form></td>
+						<td><form action="ChangeMovie.do" method="GET">
 									<input type="hidden" name="id" value="${movie.id}" />
-									<input type="submit" value="Edit" />
+									<button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
 								</form> </td>
     </tr>
 </c:forEach>
 </table>
+</div>
+</div>
 </body>
 </html>

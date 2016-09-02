@@ -49,24 +49,25 @@
 </header>
 
 
-<div class="container">
-	<center>
+<div class="container text-center">
+
 	<h1>Add your movie info:</h1>
-	<form action="NewMovie.do" method="POST">
+	<form action="UpdateMovie.do" method="POST">
+		<input type="hidden" value = "${movie.id }" name ="id">
 		<h3>Title:</h3>
-		<input class="form-control form-control-lg text-center" type="text" name="Title" value="${movie.title}"/><br/>
+		<input class="form-control form-control-lg text-center" type="text" name="title" value="${movie.title}"/><br/>
 		<h3>Tagline:</h3>
-		<input class="form-control form-control-lg text-center" type="text" name="tagline"/><br/>
+		<input class="form-control form-control-lg text-center" type="text" name="tagline" value="${movie.tagline}"/><br/>
 		<h3>Year:</h3>
-		<input class="form-control form-control-lg text-center" type="text" name="year"/><br/>
+		<input class="form-control form-control-lg text-center" type="text" name="year" value="${movie.year}"/><br/>
 <h3>Rating:</h3>
 
 
-<select multiple class="form-control form-control-lg text-center">
-  <option  name="rating" value="G">G</option>
-  <option  name="rating" value="PG" >PG</option>
-  <option  name="rating" value="PG-13" >PG-13</option>
-  <option  name="rating" value="R">R</option>
+<select class="form-control form-control-lg text-center" selected ="${movie.rating}" name="rating">
+  <option value="G">G</option>
+  <option value="PG" >PG</option>
+  <option value="PG-13" >PG-13</option>
+  <option value="R">R</option>
 </select>
 
 
@@ -100,12 +101,12 @@
 
 
 		<h3>Runtime:</h3>
-		<input type="text" class="form-control form-control-lg text-center" name="runtime"/><br/>
+		<input type="text" class="form-control form-control-lg text-center" name="runtime" value ="${movie.runtime}"/><br/>
 		<h3>Poster URL</h3>
-		<input type="text" class="form-control form-control-lg text-center" name="url"/><br/>
-		<input type="submit" class="btn btn-primary" value="Add Movie" />
+		<input type="text" class="form-control form-control-lg text-center" name="url" value ="${movie.url}"/><br/>
+		<input type="submit" class="btn btn-primary" value="Update Movie" />
 	</form>
-</center>
+
 </div>
 </body>
 </html>
