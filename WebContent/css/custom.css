@@ -76,17 +76,17 @@ header[role="banner"] {
 
 .list {
   background-color: #A27035;
-  height: 15em;
-  vertical-align: middle;
-  
+  height: 10em;
+  vertical-align:middle;
+
 }
 .edit {
   background-color: #01110A;
-  height: 15em;
+  height: 10em;
   vertical-align: middle;
 }
 .add {
   background-color: #650D1B;
-  height: 15em;
+  height: 10em;
   vertical-align: middle;
 }

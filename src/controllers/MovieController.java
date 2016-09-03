@@ -42,6 +42,10 @@ public class MovieController {
 		return mv;
 	}
 	
+	
+	
+	
+	
 	@RequestMapping(path = "UpdateMovie.do", method = RequestMethod.POST)
 	public ModelAndView updateMovie(@RequestParam("title") String title,
 			@RequestParam("tagline") String tagline,
@@ -68,6 +72,16 @@ public class MovieController {
 		Movie movie = movieDao.getMovieById(id);
 		mv.addObject("movie", movie);
 		mv.setViewName("changeMovie.jsp");
+		return mv;
+	}
+	
+	
+	@RequestMapping(path = "ViewMovie.do", method = RequestMethod.GET)
+	public ModelAndView getMovieById(@RequestParam("id") int id) {
+		ModelAndView mv = new ModelAndView();
+		Movie movie = movieDao.getMovieById(id);
+		mv.setViewName("viewMovie.jsp");
+		mv.addObject("movie", movie);
 		return mv;
 	}
 	

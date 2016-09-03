@@ -50,7 +50,32 @@
 	  <!-- END OD NAV -->
 	<c:choose>
 		<c:when test="${! empty movie}">
-<div class="col-md-3">
+
+				<div class="jumbotron">
+					<div class="container">
+					<div class="col-sm-4">
+						<center>
+						<img class="img-fluid img-responsive" src="${movie.url}" alt="${movie.title} Poster">
+						</center>
+				</div>
+					<div class="col-sm-8">
+						<h1>${movie.title}</h1>
+						<p>(${movie.year})</p>
+						<h3><i>${movie.tagline}</i></h3>
+						<hr>
+
+							<hr>
+							<h4>${movie.genre}</h4>
+							<hr>
+							<p>${movie.runtime} mins | Rated ${movie.rating}</p>
+
+					</div>
+				</div>
+			</div>
+
+
+
+<%-- <div class="col-md-3">
 			<div class="card text-center">
 	  <img class="card-img-top" src="${movie.url}" alt="Card image cap">
 	  <div class="card-block">
@@ -64,11 +89,47 @@
 			<li class="list-group-item">${movie.runtime}</li>
 	  </ul>
 	</div>
-</div>
+</div> --%>
 		</c:when>
 		<c:otherwise>
 			<p>No movie found</p>
 		</c:otherwise>
 	</c:choose>
+
+	<div class="row homebuttons">
+	    <a href="ListMovies.do">
+	    <div class="col-md-4 list">
+
+	      <h1>LIST</h1>
+	      <h1><span class="glyphicon glyphicon-list" aria-hidden="true"></span></h1>
+
+	  </div>
+	</a>
+	<a href="EditMovies.do">
+	    <div class="col-md-4 edit">
+
+	      <h1>EDIT</h1>
+	      <h1><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h1>
+
+	  </div>
+	</a>
+	<a href="newMovie.html">
+	    <div class="col-md-4 add">
+
+	      <h1>ADD</h1>
+	      <h1><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></h1>
+
+		</div>
+	</a>
+	</div>
+
+
+
+	<footer class="container-fluid text-center">
+	  <p>Footer Text</p>
+	</footer>
+
+
+
 </body>
 </html>

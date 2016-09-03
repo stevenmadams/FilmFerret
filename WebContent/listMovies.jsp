@@ -35,14 +35,21 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="ListMovies.do">List Movies</a></li>
+          <li ><a href="#">Home</a></li>
+          <li class="active"><a href="ListMovies.do">List Movies</a></li>
           <li><a href="newMovie.html">Add Movie</a></li>
           <li><a href="EditMovies.do">Edit Movies</a></li>
         </ul>
       </div>
     </div>
+		<div class="row">
+			<div class="list text-center">
+		<h1 class="vertical-align">Your movies...</h1>
+		</div>
+		</div>
   </nav>
+
+
 
 
 </header>
@@ -64,6 +71,8 @@
 <%-- CARD --%>
 
 <%-- </c:forEach> --%>
+
+
 <div class="container">
 <c:forEach items="${movies}" var="movie">
 
@@ -71,14 +80,11 @@
 				<div class="card">
 		  <img class="card-img-top" src="<c:out value="${movie.url}"/>" alt="Card image cap">
 		  <div class="card-block text-center">
-		    <h4 class="card-title"><a href="viewMovie/?${movie.id}"><c:out value="${movie.title}"/></a></h4>
-		    <p class="card-text"><i><c:out value="${movie.tagline}"/></i></p>
+		    <h4 class="card-title"><c:out value="${movie.title}"/></h4>
+		    <p class="card-text"><i><c:out value="${movie.year}"/></i></p>
 		  </div>
 		  <ul class="list-group list-group-flush text-center">
-		    <li class="list-group-item"><c:out value="${movie.year}"/></li>
-		    <li class="list-group-item"><c:out value="${movie.genre}"/></li>
-		    <li class="list-group-item"><c:out value="${movie.rating}"/></li>
-				<li class="list-group-item"><c:out value="${movie.runtime}"/></li>
+				<li class="list-group-item"><a class="btn btn-primary" href="ViewMovie.do?id=${movie.id}" role="button">	<span class="glyphicon glyphicon-film" aria-hidden="true"></span><br>More Info</a></li>
 		  </ul>
 		</div>
 	</div>

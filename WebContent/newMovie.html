@@ -14,6 +14,37 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+
+
+
+	<script>
+	function myFunction() {
+	    var x, text;
+
+	    // Get the value of the input field with id="numb"
+	    x = document.getElementById("year").value;
+
+	    // If x is Not a Number or less than one or greater than 10
+	    if (isNaN(x) || x < 1900 || x > 2017) {
+	        text = "Input not valid";
+	    }
+	    document.getElementById("demo").innerHTML = text;
+	}
+	function myFunction() {
+			var x, text;
+
+			// Get the value of the input field with id="numb"
+			x = document.getElementById("runtime").value;
+
+			// If x is Not a Number or less than one or greater than 10
+			if (isNaN(x) || x < 1 || x > 400) {
+					text = "Input not valid";
+			}
+			document.getElementById("demo").innerHTML = text;
+	}
+	</script>
+
+
 </head>
 <body>
 <div class="dip">
@@ -32,9 +63,9 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li ><a href="#">Home</a></li>
 				<li><a href="ListMovies.do">List Movies</a></li>
-				<li><a href="newMovie.html">Add Movie</a></li>
+				<li class="active"><a href="newMovie.html">Add Movie</a></li>
 				<li><a href="EditMovies.do">Edit Movies</a></li>
 			</ul>
 		</div>
@@ -54,7 +85,7 @@
 		<h3>Tagline:</h3>
 		<input class="form-control form-control-lg text-center" type="text" name="tagline"/><br/>
 		<h3>Year:</h3>
-		<input class="form-control form-control-lg text-center" type="text" name="year"/><br/>
+		<input id="year" class="form-control form-control-lg text-center" type="text" name="year"/><br/>
 <h3>Rating:</h3>
 
 
@@ -98,7 +129,7 @@
 
 
 		<h3>Runtime:</h3>
-		<input type="text" class="form-control form-control-lg text-center" name="runtime"/><br/>
+		<input id="runtime" type="text" class="form-control form-control-lg text-center" name="runtime"/><br/>
 		<h3>Poster URL</h3>
 		<input type="text" class="form-control form-control-lg text-center" name="url"/><br/>
 		<input type="submit" class="btn btn-primary" value="Add Movie" />
