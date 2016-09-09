@@ -14,15 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 public class MovieFileDAO implements MovieDAO {
 	private static final String FILE_NAME="/WEB-INF/movielib.csv";
 	private List<Movie> movies = new ArrayList<>();
-//	private String title;
-//	private String tagline;
-//	private String genre;
-//	private String year;
-//	private String rating;
-//	private int runtime;
-//	private String url;
-//	int id;
-//	
+
 	
 	@Autowired 
 	private WebApplicationContext wac;
@@ -90,9 +82,8 @@ public class MovieFileDAO implements MovieDAO {
 	}
 	@Override
 	public void addMovie(Movie movie) {
-//		movie[0] = id;
 		movies.add(movie);
-//		movie.getId()=mo
+
 	}
 	
 	@Override

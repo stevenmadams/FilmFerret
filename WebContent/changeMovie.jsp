@@ -36,7 +36,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li ><a href="#">Home</a></li>
+				<li ><a href="index.html">Home</a></li>
 				<li><a href="ListMovies.do">List Movies</a></li>
 				<li><a href="newMovie.html">Add Movie</a></li>
 				<li class="active"><a href="EditMovies.do">Edit Movies</a></li>

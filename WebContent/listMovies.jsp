@@ -42,13 +42,13 @@
         </ul>
       </div>
     </div>
-		<div class="row">
-			<div class="list text-center">
-		<h1 class="vertical-align">Your movies...</h1>
-		</div>
-		</div>
-  </nav>
 
+  </nav>
+	<div class="row">
+		<div class="list text-center">
+	<h1 class="vertical-align">Your movies...</h1>
+	</div>
+	</div>
 
 
 
@@ -73,10 +73,10 @@
 <%-- </c:forEach> --%>
 
 
-<div class="container">
+<div class="container text-centered">
 <c:forEach items="${movies}" var="movie">
 
-	<div class="col-md-3">
+	<div class="col-md-3 col-centered">
 				<div class="card">
 		  <img class="card-img-top" src="<c:out value="${movie.url}"/>" alt="Card image cap">
 		  <div class="card-block text-center">
