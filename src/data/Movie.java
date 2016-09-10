@@ -1,6 +1,7 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Movie {
 	private int id;
@@ -8,14 +9,15 @@ public class Movie {
 	private String tagline;
 	private int year;
 	private String rating;
-	private ArrayList<String> genre;
+	private List<MovieGenre> genre;
 	private int runtime;
 	private String url;
 
 	public Movie() {
 	}
 
-	public Movie(int id, String title, String tagline, int year, String rating, ArrayList<String> genre, int runtime, String url) {
+	public Movie(int id, String title, String tagline, int year, String rating, List<MovieGenre> genre, int runtime,
+			String url) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -26,6 +28,7 @@ public class Movie {
 		this.runtime = runtime;
 		this.url = url;
 	}
+
 	public Movie(int id, String title, String tagline, int year, String rating, int runtime, String url) {
 		super();
 		this.id = id;
@@ -34,6 +37,14 @@ public class Movie {
 		this.year = year;
 		this.rating = rating;
 		this.runtime = runtime;
+		this.url = url;
+	}
+
+	public Movie(int id, String title, int year, String url) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.year = year;
 		this.url = url;
 	}
 
@@ -57,7 +68,7 @@ public class Movie {
 		return rating;
 	}
 
-	public ArrayList<String> getGenre() {
+	public List<MovieGenre> getGenre() {
 		return genre;
 	}
 
@@ -85,7 +96,7 @@ public class Movie {
 		this.rating = rating;
 	}
 
-	public void setGenre(ArrayList<String> genre) {
+	public void setGenre(List<MovieGenre> genre) {
 		this.genre = genre;
 	}
 
@@ -107,8 +118,4 @@ public class Movie {
 				+ ", genre=" + genre + ", runtime=" + runtime + ", url=" + url + "]";
 	}
 
-
-	
-	
-	
 }

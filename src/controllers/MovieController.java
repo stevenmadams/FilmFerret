@@ -15,9 +15,8 @@ public class MovieController {
 	@Autowired
 	private MovieDAO movieDao;
 
-	@RequestMapping(path = "ListMovies.do",
-			method = RequestMethod.GET)
-	public ModelAndView getMovieById() {
+	@RequestMapping(path = "ListMovies.do", method = RequestMethod.GET)
+	public ModelAndView listMovies() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("listMovies.jsp");
 		mv.addObject("movies", movieDao.getAllMovies());

@@ -55,25 +55,24 @@
 </header>
 
 	  <!-- END OD NAV -->
-<%-- <a href="newMovie.html">Add Movie</a><br/>
-<a href="EditMovies.do">Edit Movies</a><br/>
-
+<%-- 
 	<table action = "ListMovies.do" method="GET" >
 <c:forEach items="${movies}" var="movie">
     <tr>
-        <%-- <td> <a href="addMovie.do?id=${moive.id}"><c:out value="${movie.title}"/></a></td> --%>
-				<%-- <td><c:out value="${movie.title}"/></td>
+        <td> <a href="addMovie.do?id=${moive.id}"><c:out value="${movie.title}"/></a></td> 
+				<td><c:out value="${movie.title}"/></td>
         <td><c:out value="${movie.genre}"/></td>
 
-    </tr> --%>
-<%-- CARD --%>
+    </tr>
+    </table>
+CARD
 
-<%-- CARD --%>
+CARD
 
-<%-- </c:forEach> --%>
+</c:forEach> --%>
 
-
-<div class="container text-centered">
+<table action = "ListMovies.do" method="GET" >
+<div class="container text-centered col-centered">
 <c:forEach items="${movies}" var="movie">
 
 	<div class="col-md-3 col-centered">
@@ -91,7 +90,8 @@
 
 </c:forEach>
 </div>
-
 </table>
+<hr>
+<h1>HELLO</h1>
 </body>
 </html>

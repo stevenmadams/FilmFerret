@@ -55,6 +55,7 @@
 					<div class="container">
 					<div class="col-sm-4">
 						<center>
+
 						<img class="img-fluid img-responsive" src="${movie.url}" alt="${movie.title} Poster">
 						</center>
 				</div>
@@ -65,10 +66,13 @@
 						<hr>
 
 							<hr>
-							<h4><c:forEach items="${movie.genre}" var="genre">${genre} </c:forEach></h4>
+							<h4>  <c:forEach items="${movie.genre}" var="genre">${genre}       </c:forEach></h4>
 							<hr>
 							<p>${movie.runtime} mins | Rated ${movie.rating}</p>
 
+					</div>
+					<div class="col-sm-12 text-center">
+						<a class="btn btn-primary" href="https://www.youtube.com/user/movieclipsTRAILERS/search?query=${movie.title}" role="button">	<span class="glyphicon glyphicon-film" aria-hidden="true"></span><br>Find Trailer</a>
 					</div>
 				</div>
 			</div>
