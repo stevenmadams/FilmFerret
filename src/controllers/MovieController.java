@@ -26,7 +26,7 @@ public class MovieController {
 
 	@RequestMapping(path = "EditMovies.do",
 			method = RequestMethod.GET)
-	public ModelAndView getMovieByIdEdit() {
+	public ModelAndView editMovies() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("editMovies.jsp");
 		mv.addObject("movies", movieDao.getAllMovies());
@@ -67,7 +67,7 @@ public class MovieController {
 	}
 	
 	@RequestMapping(path = "ChangeMovie.do", method = RequestMethod.GET)
-	public ModelAndView getMovieByIdChange(@RequestParam("id") int id) {
+	public ModelAndView changeMovie(@RequestParam("id") int id) {
 		ModelAndView mv = new ModelAndView();
 		Movie movie = movieDao.getMovieById(id);
 		mv.addObject("movie", movie);
@@ -77,7 +77,7 @@ public class MovieController {
 	
 	
 	@RequestMapping(path = "ViewMovie.do", method = RequestMethod.GET)
-	public ModelAndView getMovieById(@RequestParam("id") int id) {
+	public ModelAndView viewMovie(@RequestParam("id") int id) {
 		ModelAndView mv = new ModelAndView();
 		Movie movie = movieDao.getMovieById(id);
 		mv.setViewName("viewMovie.jsp");

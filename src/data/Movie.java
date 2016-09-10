@@ -1,19 +1,21 @@
 package data;
 
+import java.util.ArrayList;
+
 public class Movie {
 	private int id;
 	private String title;
 	private String tagline;
-	private String year;
+	private int year;
 	private String rating;
-	private String genre;
+	private ArrayList<String> genre;
 	private int runtime;
 	private String url;
 
 	public Movie() {
 	}
 
-	public Movie(int id, String title, String tagline, String year, String rating, String genre, int runtime, String url) {
+	public Movie(int id, String title, String tagline, int year, String rating, ArrayList<String> genre, int runtime, String url) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -21,6 +23,16 @@ public class Movie {
 		this.year = year;
 		this.rating = rating;
 		this.genre = genre;
+		this.runtime = runtime;
+		this.url = url;
+	}
+	public Movie(int id, String title, String tagline, int year, String rating, int runtime, String url) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.tagline = tagline;
+		this.year = year;
+		this.rating = rating;
 		this.runtime = runtime;
 		this.url = url;
 	}
@@ -37,7 +49,7 @@ public class Movie {
 		return tagline;
 	}
 
-	public String getYear() {
+	public int getYear() {
 		return year;
 	}
 
@@ -45,7 +57,7 @@ public class Movie {
 		return rating;
 	}
 
-	public String getGenre() {
+	public ArrayList<String> getGenre() {
 		return genre;
 	}
 
@@ -65,7 +77,7 @@ public class Movie {
 		this.tagline = tagline;
 	}
 
-	public void setYear(String year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
@@ -73,7 +85,7 @@ public class Movie {
 		this.rating = rating;
 	}
 
-	public void setGenre(String genre) {
+	public void setGenre(ArrayList<String> genre) {
 		this.genre = genre;
 	}
 

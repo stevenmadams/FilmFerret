@@ -65,7 +65,7 @@
 						<hr>
 
 							<hr>
-							<h4>${movie.genre}</h4>
+							<h4><c:forEach items="${movie.genre}" var="genre">${genre} </c:forEach></h4>
 							<hr>
 							<p>${movie.runtime} mins | Rated ${movie.rating}</p>
 

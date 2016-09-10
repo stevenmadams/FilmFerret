@@ -32,12 +32,12 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#myNavbar">
+						data-target="#movieNavBar">
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
+				<div class="collapse navbar-collapse" id="movieNavBar">
 					<ul class="nav navbar-nav">
 						<li ><a href="index.html">Home</a></li>
 						<li><a href="ListMovies.do">List Movies</a></li>
