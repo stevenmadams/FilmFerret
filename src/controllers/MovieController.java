@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import data.Movie;
 import data.MovieDAO;
+import data.MovieGenre;
 
 @Controller
 public class MovieController {
@@ -48,9 +51,9 @@ public class MovieController {
 	@RequestMapping(path = "UpdateMovie.do", method = RequestMethod.POST)
 	public ModelAndView updateMovie(@RequestParam("title") String title,
 			@RequestParam("tagline") String tagline,
-			@RequestParam("year") String year,
+			@RequestParam("year") int year,
 			@RequestParam("rating") String rating,
-			@RequestParam("genre") String genre,
+			@RequestParam("genre") List<MovieGenre> genre,
 			@RequestParam("runtime") int runtime,
 			@RequestParam("url") String url,
 			@RequestParam("id") int id

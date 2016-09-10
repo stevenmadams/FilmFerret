@@ -127,14 +127,78 @@ public class MovieDbDAO implements MovieDAO {
 
 	@Override
 	public void removeMovie(Movie movie) {
-		// TODO Auto-generated method stub
+		try {
+		      Connection conn = DriverManager.getConnection(url, user, pword);
+
+		      PreparedStatement stmt = conn.prepareStatement("DELETE FROM movie WHERE id = ?");
+		      stmt.setInt(1, movie.getId());
+		      stmt.executeUpdate(); 
+		      stmt.close();
+		      conn.close();
+		      
+		      }
+		   
+	
+		    catch (SQLException sqle) {
+		      sqle.printStackTrace(System.err);
+		    }
 
 	}
 
 	@Override
-	public void updateMovie(Movie movie, String title, String tagline, String year, String rating, String genre,
-			int runtime, String url) {
-		// TODO Auto-generated method stub
+	public void updateMovie(Movie movie, String title, String tagline, int year, String rating, List<MovieGenre> genre, int runtime, String url) {
+		try {
+			Connection conn = DriverManager.getConnection(this.url, user, pword);
+			String sqltxt;
+			sqltxt = "UPDATE movie SET title =?, tagline=?, year=?, rating=?, runtime=?, url=? " 
+			+ " WHERE id = ?"; 
+	
+			PreparedStatement stmt = conn.prepareStatement(sqltxt);
+			stmt.setString(1, title);
+			stmt.setString(2, tagline);
+			stmt.setInt(3, year);
+			stmt.setString(4, rating);
+			stmt.setInt(5, runtime);
+			stmt.setString(6, url);
+			stmt.setInt(7, movie.getId());
+			int uc = stmt.executeUpdate();
+			System.out.println("HERE");
+			if (uc == 1) {
+		        System.out.println("DEBUG: MovieDbDAO.addMovie(): Movie added: " + movie);
+		        ResultSet rs2 = stmt.getGeneratedKeys();
+		        int newMovieId;
+		        if (rs2.next()) {
+		          newMovieId = rs2.getInt(1);
+		          System.out.println("Movie added, id: "+newMovieId);
+		          // Use newMovieId to insert each genre from movie.getGenres() as
+		          // records in movie_genre
+		          List<MovieGenre> syms = movie.getGenre();
+		          if (syms.size() > 0) {
+		            sqltxt = "UPDATE movie_genre SET movie_id =?, genre_id =? "
+		                   + " WHERE id =?";
+		            stmt = conn.prepareStatement(sqltxt);
+		            for (MovieGenre sym : syms) {
+		              stmt.setInt(1, newMovieId);
+		              stmt.setInt(2, sym.getGenreId());
+		              stmt.setInt(3, newMovieId);
+		              uc = stmt.executeUpdate();
+		              if (uc == 1 ) {
+		                System.out.println("Added genre "+ sym);
+		              }
+		            }
+		          }
+		        }
+		      }
+			else {
+				System.err.println("No movie added! :( ");
+			}
+			
+			stmt.close();	
+			conn.close();
+		}
+		catch (SQLException sqle){
+			sqle.printStackTrace(System.err);
+		}
 
 	}
 
