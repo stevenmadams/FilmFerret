@@ -67,7 +67,7 @@
 							<c:out value="${movie.year}" />
 						</p>
 						<p>
-							<c:out value="${movie.genre}" />
+							<c:forEach items="${movie.genre}" var="genre">${genre}</c:forEach>
 						</p>
 						<p>
 							<c:out value="${movie.rating}" />
@@ -107,7 +107,7 @@
 							<c:out value="${movie.year}" />
 						</div>
 						<div class="col-sm-2">
-							<c:out value="${movie.genre}" />
+							<c:forEach items="${movie.genre}" var="genre">${genre}       </c:forEach>
 						</div>
 						<div class="col-sm-1">
 							<c:out value="${movie.rating}" />

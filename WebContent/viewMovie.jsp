@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="refresh" content="ViewMovie.do?id=${movie.id}">
   <title>FilmFerret</title>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

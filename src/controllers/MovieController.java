@@ -61,10 +61,10 @@ public class MovieController {
 			) {
 	
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("viewMovie.jsp");
 		Movie m = movieDao.getMovieById(id);
 		movieDao.updateMovie(m, title , tagline, year, rating, genre, runtime, url);
 		mv.addObject(m);
+		mv.setViewName("viewMovie.jsp");
 		return mv;
 	}
 	
