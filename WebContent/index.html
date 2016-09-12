@@ -1,105 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>FilmFerret</title>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/stevens.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://use.fontawesome.com/f3e697ff49.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
-  <div class="dip">
-        <a href="index.html"> <img id="logo-main" src="img/filmferretlogomd.png" width="100" alt="FilmFerret"></img></a>
-  </div>
-<header role="banner">
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <!-- Menu
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="row" style="margin: 2%">
+      <div class="navfont">
+      <div class="two columns center">
+        <a href="index.html"><img src="img/filmferretlogomd.png" width="100" alt="FilmFerret"></a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="ListMovies.do">List Movies</a></li>
-          <li><a href="newMovie.html">Add Movie</a></li>
-          <li><a href="EditMovies.do">Edit Movies</a></li>
-        </ul>
+      <div class="four columns">
+        <a href="index.html"><h1 class="center">FilmFerret</h1></a>
+      </div>
+
+      <div class="two columns">
+        <a href="ListMovies.do">
+        <i class="fa fa-list fa-3x" aria-hidden="true"></i>
+        <h6>LIST MOVIES</h6>
+      </a>
+      </div>
+      <div class="two columns">
+        <a href="newMovie.html">
+        <i class="fa fa-film fa-3x" aria-hidden="true"></i>
+        <h6>ADD MOVIES</h6>
+      </a>
+      </div>
+      <div class="two columns">
+        <a href="EditMovies.do">
+        <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+        <h6>EDIT MOVIES</h6>
+      </a>
       </div>
     </div>
-  </nav>
-
-
-</header>
-
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="jumbotron">
-      <div class="row">
-      <div class="col-xs-6">
-    <h1 class="text-center">FilmFerret</h1>
     </div>
-    <div class="col-xs-6">
-    <img class="img-responsive" src="img/ferret.gif">
-    </div>
-    </div>
-    <marquee scrolldelay="0" behavior="slide" direction="right" scrollamount="100" s><img class="img-responsive" src="img/filmstrip.png"></marquee>
+    <hr>
+  </div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="container">
+
+    <div class="row">
+      <div class="one-half column" style="margin-top: 5%">
+        <h4>Basic Page</h4>
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      </div>
+      <div class="one-half column center" style="margin-top: 5%">
+        <img class="animated jello img-responsive" src="img/ferret.gif">
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-<div class="row homebuttons">
-    <a href="ListMovies.do">
-    <div class="col-md-4 list">
-
-      <h1>LIST</h1>
-      <h1><span class="glyphicon glyphicon-list" aria-hidden="true"></span></h1>
-
-  </div>
-</a>
-<a href="EditMovies.do">
-    <div class="col-md-4 edit">
-
-      <h1>EDIT</h1>
-      <h1><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h1>
-
-  </div>
-</a>
-<a href="newMovie.html">
-    <div class="col-md-4 add">
-
-      <h1>ADD</h1>
-      <h1><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></h1>
-    </div>
-</a>
-</div>
-</div>
-<div class="container">
-  <div class="row">
-    <h1>GENRES</h1>
-  </div>
-</div>
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
-
-
-
-<!-- 9f9cebd1 -->
