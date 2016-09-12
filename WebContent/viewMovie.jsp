@@ -3,11 +3,11 @@
 
 
 <head>
-
+	<meta http-equiv="refresh" content="1;ViewMovie.do?id=${movie.id}">
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>FilmFerret VIEW</title>
   <meta name="description" content="">
   <meta name="author" content="">
 

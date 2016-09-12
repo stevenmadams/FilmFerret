@@ -27,7 +27,7 @@
 
 /* mouse over link */
 .navfont a:hover {
-    color: blue;
+    color: #999999;
     text-decoration: none;
 }
 
@@ -89,4 +89,46 @@ img {
 }
 .img-circle {
   border-radius: 50%;
+}
+
+
+.bubble
+{
+position: relative;
+width: 250px;
+height: 120px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 80px;
+-moz-border-radius: 80px;
+border-radius: 80px;
+border: #7F7F7F solid 4px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -15px;
+left: 110px;
+}
+
+.bubble:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 18px 18px 0;
+border-color: #7F7F7F transparent;
+display: block;
+width: 0;
+z-index: 0;
+bottom: -22px;
+left: 107px;
 }

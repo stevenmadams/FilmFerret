@@ -7,7 +7,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>FilmFerret EDIT</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -81,7 +81,7 @@
 
 		<div action="EditMovies.do" method="GET">
   <div class ="center">
-  <img class="center animated flip" src="img/filmstrip.png" style="size: 50%">
+  <img class="center animated flipInX" src="img/filmstrip.png" style="size: 50%">
   </div>
   <hr>
 			<c:forEach items="${movies}" var="movie">
@@ -94,7 +94,7 @@
 							<c:out value="${movie.year}" />
 						</p>
 					</div>
-					<div class="four columns">
+					<div class="four columns center">
 
 
 									<form action="RemoveMovie.do" method="POST">
@@ -103,7 +103,7 @@
                       <i class="fa fa-trash fa-3x" aria-hidden="true"></i>
 										</button>
 									</form>
-								<br>
+							
 									<form action="ChangeMovie.do" method="GET">
 										<input type="hidden" name="id" value="${movie.id}" />
 										<button type="submit" class="button">

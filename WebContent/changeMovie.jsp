@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>FilmFerret UPDATE</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -79,7 +79,11 @@
     <div class="row">
       <div class="four columns" style="margin-top: 5%">
         <div class="one-half column center" style="margin-top: 5%">
-          <img class="animated bounceInLeft img-responsive" src="img/ferretflip.gif">
+        <div class="bubble center animated zoomIn"><h2>Update your movie!</h2></div>
+        <br>
+        <br>
+          <img class="animated bounceInLeft img-responsive center" src="img/ferretflip.gif">
+          
         </div>
       </div>
       <div class="eight columns" style="margin-top: 5%">
@@ -112,6 +116,8 @@
 
           <h3>Genre:</h3>
           <span>
+          
+
            <label><input id="1" type="checkbox" name="genre" value="Action"> Action</label>
            <label><input id="2" type="checkbox" name="genre" value="Adventure"> Adventure</label>
            <label><input id="3" type="checkbox" name="genre" value="Animated"> Animated</label>

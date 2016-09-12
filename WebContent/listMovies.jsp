@@ -6,7 +6,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>FilmFerret LIST</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -41,11 +41,10 @@
   <!-- Menu
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div class="row" style="margin: 2%
-height: 300px;
-overflow: scroll;">
+  <div class="row" style="margin: 2%">
       <div class="navfont">
       <div class="two columns center">
+        
         <a href="index.html"><img src="img/filmferretlogomd.png" width="100" alt="FilmFerret"></a>
       </div>
       <div class="four columns">
@@ -78,7 +77,7 @@ overflow: scroll;">
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
   <div class ="center">
-  <img class="center animated flip" src="img/filmstrip.png" style="size: 50%">
+  <img class="center animated flipInX" src="img/filmstrip.png" style="size: 50%">
   </div>
   <hr>
     <c:forEach items="${movies}" var="movie">
